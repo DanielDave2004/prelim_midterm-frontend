@@ -52,9 +52,12 @@ function getStudents(){
     //     console.log(error);
     // })
     .catch(error => {
-    console.error("Something went wrong:", error.message);
+        console.error("Something went wrong:", error.message);
+        alert("Student Added Successfully");
+        location.reload();
     });
 
 }
+
 
 
