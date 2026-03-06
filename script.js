@@ -48,16 +48,12 @@ function getStudents(){
 
         content.innerHTML = html;
     })
-    // .catch(error=>{
-    //     console.log(error);
-    // })
-    .catch(error => {
-        console.error("Something went wrong:", error.message);
-        alert("Student Added Successfully");
-        location.reload();
+    .catch(error=>{
+        console.log(error);
+        alert("Something went wrong");
     });
-
 }
+
 
 
 
