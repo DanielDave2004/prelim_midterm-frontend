@@ -15,20 +15,22 @@ submit.addEventListener('click',()=>{
         headers:{
             "Content-Type":"application/json",
         },
-    })
-    .then(response => {
-        if (!response.ok) {  // ✅ checks if server returned an error
-            throw new Error("Server error: " + response.status);
-        }
-        alert("Student Added Successfully");
-        location.reload();
-    })
-    .catch((error) => {
+    }).catch((error) => {
         console.log(error);
-        alert("Something went wrong: " + error.message);
-    });
-    // alert("Student Added Successfully");
-    // location.reload();
+    })
+    alert("Student Added Successfully");
+    location.reload();
+    // .then(response => {
+    //     if (!response.ok) {  
+    //         throw new Error("Server error: " + response.status);
+    //     }
+    //     alert("Student Added Successfully");
+    //     location.reload();
+    // })
+    // .catch((error) => {
+    //     console.log(error);
+    //     alert("Something went wrong: " + error.message);
+    // });
 });
 
 
@@ -62,6 +64,7 @@ function getStudents(){
         alert("Something went wrong");
     });
 }
+
 
 
 
