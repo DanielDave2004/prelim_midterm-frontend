@@ -15,12 +15,15 @@ submit.addEventListener('click',()=>{
         headers:{
             "Content-Type":"application/json",
         },
+    }).then(response => {
+        alert("Student Added Successfully");
+        location.reload();
     }).catch((error)=>{
         console.log(error);
         alert("Something went wrong");
     })
-    alert("Student Added Successfully");
-    location.reload();
+    // alert("Student Added Successfully");
+    // location.reload();
 });
 
 
@@ -54,6 +57,7 @@ function getStudents(){
         alert("Something went wrong");
     });
 }
+
 
 
 
