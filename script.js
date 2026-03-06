@@ -17,6 +17,7 @@ submit.addEventListener('click',()=>{
         },
     }).catch((error)=>{
         console.log(error);
+        alert("Something went wrong");
     })
     alert("Student Added Successfully");
     location.reload();
@@ -53,6 +54,7 @@ function getStudents(){
         alert("Something went wrong");
     });
 }
+
 
 
 
