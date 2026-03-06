@@ -96,7 +96,7 @@ h1 {
 /* Table styling */
 #content {
     width: 100%;
-    max-width: 800px;
+    width: 1000px;
     background: white;
     border-radius: 12px;
     overflow: hidden;
