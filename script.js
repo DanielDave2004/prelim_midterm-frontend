@@ -15,13 +15,18 @@ submit.addEventListener('click',()=>{
         headers:{
             "Content-Type":"application/json",
         },
-    }).then(response => {
+    })
+    .then(response => {
+        if (!response.ok) {  // ✅ checks if server returned an error
+            throw new Error("Server error: " + response.status);
+        }
         alert("Student Added Successfully");
         location.reload();
-    }).catch((error)=>{
-        console.log(error);
-        alert("Something went wrong");
     })
+    .catch((error) => {
+        console.log(error);
+        alert("Something went wrong: " + error.message);
+    });
     // alert("Student Added Successfully");
     // location.reload();
 });
@@ -57,6 +62,7 @@ function getStudents(){
         alert("Something went wrong");
     });
 }
+
 
 
 
