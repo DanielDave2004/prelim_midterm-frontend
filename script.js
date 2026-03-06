@@ -9,7 +9,7 @@ submit.addEventListener('click',()=>{
     let email=document.querySelector("#eMail").value;
     let formData={fullName,course,yearLevel,email};
 
-    fetch("http://localhost:1111/api/students",{
+    fetch("https://prelim-midterm-backend.onrender.com/api/students",{
         method:'POST',
         body: JSON.stringify(formData),
         headers:{
@@ -30,7 +30,7 @@ window.addEventListener('load', ()=>{
 function getStudents(){
     let html="";
 
-    fetch('http://localhost:1111/api/students',{mode:'cors'})
+    fetch('https://prelim-midterm-backend.onrender.com/api/students',{mode:'cors'})
     .then(response=>{
         return response.json();
     })
@@ -51,4 +51,5 @@ function getStudents(){
     .catch(error=>{
         console.log(error);
     });
+
 }
