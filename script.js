@@ -48,8 +48,9 @@ function getStudents(){
 
         content.innerHTML = html;
     })
-    .catch(error=>{
-        console.log(error);
+    .catch(error => {
+    console.error("Something went wrong:", error.message);
     });
 
 }
+
